@@ -95,7 +95,7 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 //setup
 //*************************************************************************
 
-define("SYSTEM_ENVIRONMENT", "test");
+define("SYSTEM_ENVIRONMENT", "live");
 
 if(SYSTEM_ENVIRONMENT == 'test'){
     //site directories
@@ -128,7 +128,9 @@ if(SYSTEM_ENVIRONMENT == 'test'){
     define('EMAIL_USERNAME', "ryno888@gmail.com"); 
     define('EMAIL_PASSWORD', "083229Ryno"); 
     define('EMAIL_ADDRESS', "ryno888@gmail.com"); 
+    
 }else if (SYSTEM_ENVIRONMENT == 'live'){
+    
     define('BASE_SITE_URL', "/data/index.php"); 
     define('DIR_ERROR_FILE', "files/debug/console.txt"); 
     define('DIR_BOOTSTRAP_CSS', "/../data/bootstrap/css"); 
