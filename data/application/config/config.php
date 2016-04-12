@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-$config['base_url'] = 'http://localhost/lily_bery_events/';
+$config['base_url'] = 'http://lilyberryevents.com.dedi698.jnb1.host-h.net/';
 
 /*
 |--------------------------------------------------------------------------
