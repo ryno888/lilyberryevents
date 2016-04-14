@@ -6,6 +6,12 @@
  * and open the template in the editor.
  */
 $active_user = mo_user::get_user();
+$logo = "../../data/files/images/text_image.png";
+$view = $this->router->fetch_method();
+if($view == "home"){
+    return;
+}
+
 ?>
 <html>
     <head>
@@ -13,25 +19,27 @@ $active_user = mo_user::get_user();
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <link href="<?php echo (DIR_BOOTSTRAP_CSS.'/bootstrap.css'); ?>" rel="stylesheet">
-        <link href="<?php echo (DIR_BOOTSTRAP_CSS.'/bootstrap.min.css'); ?>" rel="stylesheet">
-        <link href="<?php echo (DIR_BOOTSTRAP_CSS.'/style.css'); ?>" rel="stylesheet">
-        <link href="<?php echo (DIR_BOOTSTRAP_CSS.'/font-awesome/css/font-awesome.min.css'); ?>" rel="stylesheet" type="text/css">
+        <link class="systemStyleSheet" href="<?php echo (DIR_BOOTSTRAP_CSS.'/bootstrap.css'); ?>" rel="stylesheet">
+        <link class="systemStyleSheet" href="<?php echo (DIR_BOOTSTRAP_CSS.'/bootstrap.min.css'); ?>" rel="stylesheet">
+        <link class="systemStyleSheet" href="<?php echo (DIR_BOOTSTRAP_CSS.'/style.css'); ?>" rel="stylesheet">
+        <link class="systemStyleSheet" href="<?php echo (DIR_BOOTSTRAP_CSS.'/font-awesome/css/font-awesome.min.css'); ?>" rel="stylesheet" type="text/css">
     </head>
     
     <body class="font-primary">
         <?php if(!property_exists($data, "hide_nav")){ ?>
-            <nav class="navbar navbar-default">
+            <nav class="navbar-system navbar-default-system systemNav">
             <div class="container-fluid">
               <!-- Brand and toggle get grouped for better mobile display -->
               <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                  <span class="sr-only">Toggle navigation</span>
+                <button type="button" class="menuButton navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  
+                <span class="color-blue fa fa-bars fa-2x"></span>
+                <span class="sr-only">Toggle navigation</span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Lily Berry Events</a>
+                  <span><image class='fl' src='<?php echo $logo; ?>'/><a class="navbar-brand" href="#">Lily Berry Events</a></span>
               </div>
 
               <!-- Collect the nav links, forms, and other content for toggling -->

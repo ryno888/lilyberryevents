@@ -99,13 +99,13 @@ define("SYSTEM_ENVIRONMENT", "live");
 
 if(SYSTEM_ENVIRONMENT == 'test'){
     //site directories
-    define('BASE_SITE_URL', "/lily_bery_events/data/index.php"); 
+    define('BASE_SITE_URL', 'http://localhost/lilyberryevents/trunk/'); 
     define('DIR_ERROR_FILE', "files/debug/console.txt"); 
-    define('DIR_BOOTSTRAP_CSS', "/../lily_bery_events/data/bootstrap/css"); 
-    define('DIR_BOOTSTRAP_FONTS', "/../lily_bery_events/data/bootstrap/fonts"); 
-    define('DIR_BOOTSTRAP_JS', "/../lily_bery_events/data/bootstrap/js"); 
+    define('DIR_BOOTSTRAP_CSS', "/../lilyberryevents/trunk/data/bootstrap/css"); 
+    define('DIR_BOOTSTRAP_FONTS', "/../lilyberryevents/trunk/data/bootstrap/fonts"); 
+    define('DIR_BOOTSTRAP_JS', "/../lilyberryevents/trunk/data/bootstrap/js"); 
 
-    define("DIR_IMAGES", "../lily_bery_events/data/files/images/");
+    define("DIR_IMAGES", "../lilyberryevents/trunk/data/files/images/");
     define("DIR_PLACEHOLDER", "../../data/files/images/placeholder.png");
 
     //site credentials
@@ -131,13 +131,13 @@ if(SYSTEM_ENVIRONMENT == 'test'){
     
 }else if (SYSTEM_ENVIRONMENT == 'live'){
     
-    define('BASE_SITE_URL', "/data/index.php"); 
+    define('BASE_SITE_URL', "http://lilyberryevents.com.dedi698.jnb1.host-h.net/"); 
     define('DIR_ERROR_FILE', "files/debug/console.txt"); 
     define('DIR_BOOTSTRAP_CSS', "/../data/bootstrap/css"); 
     define('DIR_BOOTSTRAP_FONTS', "/../data/bootstrap/fonts"); 
     define('DIR_BOOTSTRAP_JS', "/../data/bootstrap/js"); 
 
-    define("DIR_IMAGES", "../data/files/images/");
+    define("DIR_IMAGES", "./data/files/images/");
     define("DIR_PLACEHOLDER", "../../data/files/images/placeholder.png");
 
     //site credentials

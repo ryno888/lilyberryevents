@@ -227,8 +227,8 @@ fieldset[disabled] .btn-xl.active {
     }
 }
 header {
-    background-image: url(../img/header_2-bg.jpg);
-    opacity: 0.5;
+/*    background-image: url(../img/header_2-bg.jpg);
+    opacity: 0.5;*/
     background-repeat: none;
     background-attachment: scroll;
     background-position: center center;
@@ -241,7 +241,7 @@ header {
 }
 header .intro-text {
     padding-top: 100px;
-    padding-bottom: 50px
+    padding-bottom: 50px;
 }
 header .intro-text .intro-lead-in {
     font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;

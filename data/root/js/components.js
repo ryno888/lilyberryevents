@@ -3,10 +3,12 @@ $(document).ready(function($){
     $('body').on('click', '.collapseText', function(){
         var element = $(this);
         if(element.hasClass('fa-arrow-up')){
+            $('#demo').addClass('hidden');
             $(this).removeClass('fa-arrow-up');
             $(this).addClass('fa-arrow-down');
             $(".packageLabel").text("View Packages");
         }else{
+            $('#demo').removeClass('hidden');
             $(this).removeClass('fa-arrow-down');
             $(this).addClass('fa-arrow-up');
             $(".packageLabel").text("Hide Packages");

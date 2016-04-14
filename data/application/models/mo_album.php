@@ -41,6 +41,14 @@ class mo_album{
             WHERE img_ref_album = $alb_id AND img_is_main = 1
         ");
         
+        if(!$result){
+            $result = db::selectsingle("
+                SELECT img_data 
+                FROM image 
+                WHERE img_ref_album = $alb_id
+            ");
+        }
+        
         if($result && $decompress){
             return mo_file::decompress_image($result);
         }else{

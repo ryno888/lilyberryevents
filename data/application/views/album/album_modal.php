@@ -21,7 +21,7 @@
     }
 
     a {
-      color: #8ebebc;
+      color: #BBB5D4;
     }
 
     a:hover {
@@ -116,7 +116,7 @@
     
     <div class="margin-left-15">
         <div class="fr">
-            <a class="font-50 fa fa-angle-up fa-5x" title='Close' href="home#portfolio"></a>
+            <a class="font-50 fa fa-times-circle-o fa-3x" title='Close' href="home#portfolio"></a>
         </div>
         <div class="clear"></div>
     </div>
@@ -128,8 +128,8 @@
     </div>-->
     <div class="margin-top-50">
         <div style='margin: 0 auto; width: 30%; text-align: center'>
-            <h2 class='h2class'>Project Name</h2>
-            <p class="item-intro text-muted sub-header">Lorem ipsum dolor sit amet consectetur.</p>
+            <h2 class='h2class'><?php echo $data->album->alb_name ?></h2>
+            <p class="item-intro text-muted sub-header"><?php echo $data->album->alb_detail ?></p>
         </div>
         <div id="home" class="header">
 	    <div id="myCarousel" class="carousel slide bg-light-gray" data-ride="carousel">

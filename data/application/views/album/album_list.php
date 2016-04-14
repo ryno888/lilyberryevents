@@ -60,7 +60,7 @@ $pagination = mo_html::get_pagination($data->total_pages, [
                             }
                             echo "
                                 <tr class='font14'>
-                                    <td class='width-5-percent table-valign-center'>
+                                    <td class='width-10-percent table-valign-center'>
                                         <a title='Edit Album' href='edit_album?alb_id={$album->alb_id}' class='glyphicon glyphicon-edit padding-left-10'></a>
                                         <a title='Delete Album' class='glyphicon glyphicon-remove deleteAlbumPopup cursor-pointer' albid='$album->alb_id'></a>
                                     </td>

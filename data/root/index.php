@@ -29,18 +29,20 @@
     <?php include_once '../data/root/nav.php'; ?>
     <!-- Header -->
     <header>
-        <div class="container"></div>
-        <div class="intro-text">
-            <div class="intro-lead-in">Welcome To Lily Berry Events!</div>
-            <div class="intro-quote">
-                "In the sunny summer, rain is no bummer
-                When autumn comes, we gather loved ones                                                                    
-                In winter time, cuddle is no crime                                                                              
-                When spring arrives, the flowers thrive                                                                       
-                No matter what time of the year it is, there is always a time to gather awesome 
-                family & friends" – Lily Berry Events
+        <div class="mainImge">
+            <div class="container"></div>
+            <div class="intro-text colorFaded">
+                <div class="intro-lead-in">Welcome To Lily Berry Events!</div>
+                <div class="intro-quote">
+                    "In the sunny summer, rain is no bummer
+                    When autumn comes, we gather loved ones                                                                    
+                    In winter time, cuddle is no crime                                                                              
+                    When spring arrives, the flowers thrive                                                                       
+                    No matter what time of the year it is, there is always a time to gather awesome 
+                    family & friends" – Lily Berry Events
+                </div>
+                <a href="#services" class="page-scroll btn btn-xl btn-style">Tell Me More</a>
             </div>
-            <a href="#services" class="page-scroll btn btn-xl btn-style">Tell Me More</a>
         </div>
     </header>
 
@@ -130,7 +132,6 @@
                                     </a>
                                     <div class='portfolio-caption'>
                                         <h4>$album->alb_name</h4>
-                                        <p class='text-muted'>$date</p>
                                     </div>
                                 </div>
                                 
@@ -322,7 +323,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Contact Us</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted">Send us an email and we will get back to you as soon as possible.</h3>
                 </div>
             </div>
             <div class="row">
@@ -365,7 +366,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; Your Website 2014</span>
+                    <!--<span class="copyright">Copyright &copy; Your Website 2014</span>-->
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
@@ -560,7 +561,15 @@
             </div>
         </div>
     </div>
-
+    
+    <div class="jqmOverlay jqmCloseTarget" class="block"></div>
+    <div class="jqmMessage jqmModal jqmCloseTarget">
+        <div class="messagemodal-container">
+            <i class=" fr fa fa-times-circle cursor-pointer jqmClose"></i>
+            <div class="jqm-header font-primary font16 font-bold jqmMessageHeader">Email Successfully Sent</div><br>
+            <div class="jqm-message font-primary font12 jqmMessageBody">Thank you for your email. We will be in contact soon.</div><br>
+        </div>
+    </div>
     
     <!-- jQuery -->
     <script src="<?php echo $jquery_js; ?>"></script>
