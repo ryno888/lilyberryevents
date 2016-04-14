@@ -1,6 +1,8 @@
 <?php
     //css
     $url = '../root';
+    $main_path = "$url/img";
+    
     $bootstrap_min_css = "$url/css/bootstrap.min.css";
     $agency_css = "$url/css/agency.css";
     $styles_css = "$url/css/styles.css";
