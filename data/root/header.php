@@ -29,6 +29,9 @@
     <meta name="author" content="">
 
     <title>Lily Berry Events</title>
+    
+    <link rel="shortcut icon" type="image/png" href="<?php echo $main_path ?>/text_imgage.png"/>
+    <link rel="shortcut icon" type="image/png" href="<?php echo $main_path ?>/text_imgage.png"/>
 
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo $bootstrap_min_css; ?>" rel="stylesheet">
