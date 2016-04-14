@@ -95,7 +95,7 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 //setup
 //*************************************************************************
 
-define("SYSTEM_ENVIRONMENT", "test");
+define("SYSTEM_ENVIRONMENT", "live");
 
 if(SYSTEM_ENVIRONMENT == 'test'){
     //site directories
