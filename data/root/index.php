@@ -32,8 +32,8 @@
         <div class="mainImge">
             <div class="container"></div>
             <div class="intro-text colorFaded">
-                <div class="intro-lead-in">Welcome To Lily Berry Events!</div>
-                <div class="intro-quote">
+                <div class="intro-lead-in text-bold">Welcome To Lily Berry Events!</div>
+                <div class="intro-quote customFont-h3">
                     "In the sunny summer, rain is no bummer
                     When autumn comes, we gather loved ones                                                                    
                     In winter time, cuddle is no crime                                                                              
@@ -62,22 +62,22 @@
                         <i class="fa fa-heart fa-stack-1x fa-inverse"></i>
                     </span>
                     
-                     <div class="">
+                     <div>
                         <h4 class="service-heading">Weddings</h4>
-                        <p class="text-muted">
+                        <p class="text-muted customFont-h4">
                             Browse through our stunning wedding packages to help you plan the most beautiful day of your life.
                         </p>
                         <!--<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>-->
                         <a class="cursor-pointer" data-toggle="collapse" data-target="#demo">
                             <i class="fa fa-arrow-down collapseText">
-                                <span class="text-muted collapse-style packageLabel">View Packages</span>
+                                <span class="text-muted collapse-style packageLabel sub-heading">View Packages</span>
                             </i>
                         </a>
                         <div id="demo" class="collapse">
-                            <p class="text-secondary">
-                                <br/><span class='label-style'>One day package: </span>Assistance one month before the wedding and on the day  coordination of the wedding
-                                <br/><span class='label-style'>Custom package: </span>Choose what you want your wedding planner must organize for you and on the wedding day coordination
-                                <br/><span class='label-style'>Full package: </span>Planning of the entire wedding from start to finish and coordination on the day of the wedding
+                            <p class="text-secondary customFont-h4">
+                                <br/><span class='label-style sub-heading'>Lily Wedding Package (On-the-day Coordination): </span>Meeting with the Bridal Couple, 1 month before the wedding day to discuss all aspects about the wedding day. On the day of the wedding there will be careful supervision & coordination of all the proceedings from start to finish.
+                                <br/><span class='label-style sub-heading'>Custom package: </span>Choose what you want your wedding planner must organize for you and on the wedding day coordination
+                                <br/><span class='label-style sub-heading'>Full package: </span>Planning of the entire wedding from start to finish and coordination on the day of the wedding
                             </p>
                         </div>
                     </div>
@@ -88,7 +88,7 @@
                         <i class="fa fa-birthday-cake fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Parties</h4>
-                    <p class="text-muted">
+                    <p class="text-muted customFont-h4">
                         Planned parties to celebrate your special moments with the friends and family that brings it all together.
                         Each party is uniquely crafted to deliver the best guest experience possible. From site searches to menu planning and all decor, there is no event we we can not create for you.
                     </p>
@@ -99,7 +99,7 @@
                         <i class="fa fa-glass fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Special Events</h4>
-                    <p class="text-muted">Have a package tailored made to facilitate any unique event. Whether it is a corporate event or a family celebration. Spoil yourself with the creativity, experience and personal service you deserve. </p>
+                    <p class="text-muted customFont-h4">Have a package tailored made to facilitate any unique event. Whether it is a corporate event or a family celebration. Spoil yourself with the creativity, experience and personal service you deserve. </p>
                 </div>
             </div>
         </div>
@@ -111,7 +111,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Portfolio</h2>
-                    <h3 class="section-subheading text-muted">View albums of recent projects</h3>
+                    <!--<h3 class="section-subheading text-muted">View albums of recent projects</h3>-->
                 </div>
             </div>
             <div class="row">
@@ -319,46 +319,50 @@
     
     <!-- Contact Section -->
     <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Contact Us</h2>
-                    <h3 class="section-subheading text-muted">Send us an email and we will get back to you as soon as possible.</h3>
+        <div class="contactImage">
+            <div class="colorFaded padding150">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Contact Us</h2>
+                        <h3 class="section-subheading text-muted">Send us an email and we will get back to you as soon as possible.</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form name="sentMessage" id="contactForm" novalidate action="send_mail" method="POST">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input id="sender_name" name="sender_name" type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="sender_email" name="sender_email" type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="sender_tel" name="sender_tel" type="tel" class="form-control" placeholder="Your Phone *" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <textarea id="sender_text" name="sender_text" class="form-control" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="col-lg-12 text-center">
+                                    <div id="success"></div>
+                                    <button type="submit" class="btn btn-xl">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <form name="sentMessage" id="contactForm" novalidate action="send_mail" method="POST">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input id="sender_name" name="sender_name" type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="form-group">
-                                    <input id="sender_email" name="sender_email" type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="form-group">
-                                    <input id="sender_tel" name="sender_tel" type="tel" class="form-control" placeholder="Your Phone *" id="phone" required data-validation-required-message="Please enter your phone number.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <textarea id="sender_text" name="sender_text" class="form-control" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message."></textarea>
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="col-lg-12 text-center">
-                                <div id="success"></div>
-                                <button type="submit" class="btn btn-xl">Send Message</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+        </div>
         </div>
     </section>
 
@@ -366,18 +370,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <!--<span class="copyright">Copyright &copy; Your Website 2014</span>-->
+                    <a href="http://www.littlepinkbook.co.za/" target="_blank"><img src="http://www.littlepinkbook.co.za/wp-content/themes/littlepinkbook/images/logo_top_2.gif" width="174" height="105" alt="Celebration.co.za" border="0"></a>
+                    <a href="http://www.celebration.co.za/" target="_blank"><img src="http://www.celebration.co.za/members/member-logo.png" width="174" height="105" alt="Celebration.co.za" border="0"></a>
+                
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
-                        <li><a href="#"><i class="fa fa-twitter iconSpacing"></i></a>
+                        <!--<li><a href="#"><i class="fa fa-twitter iconSpacing"></i></a>-->
+                        <!--</li>-->
+                        <li><a target="_blank" href="https://www.facebook.com/lilyberryevents"><i class="fa fa-facebook iconSpacing"></i></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-facebook iconSpacing"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-linkedin iconSpacing"></i></a>
+                        <li><a target="_blank" href="https://za.linkedin.com/in/leonellevanderberg"><i class="fa fa-linkedin iconSpacing"></i></a>
                         </li>
                     </ul>
-                </div>
+                    </div>
                 <div class="col-md-4">
                     <ul class="list-inline quicklinks">
 <!--                        <li><a href="#">Privacy Policy</a>
@@ -390,7 +396,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+        </footer>
 
     <!-- Portfolio Modals -->
     <!-- Use the modals below to showcase details about your portfolio projects! -->

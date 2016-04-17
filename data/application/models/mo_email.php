@@ -27,8 +27,6 @@ class mo_email{
         $config['newline'] = "\r\n";
         $config['mailtype'] = 'html'; // or html
         $config['validation'] = TRUE; // bool whether to validate email or not      
-//        $CI->email->set_mailtype('html');
-//        $CI->email->mailtype = 'html';
         $CI->email->initialize($config);
         
         $CI->email->from($options_arr['from'], $options_arr['com_sender_name']);

@@ -8,8 +8,71 @@
 .fl{float:left}
 .fr{float:right}
 
+@font-face {
+    font-family: myFirstFont;
+    src: url(../fonts/SlenderGoldFLF.woff);
+}
+.default-font{
+     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
+.sub-heading{
+    font-size: 15px !important;
+    line-height: 28px !important;
+    font-style: normal;
+    font-weight: bold;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 25px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+section#contact .form-group input, section#contact .form-group textarea {
+    padding: 12px;
+}
+
+.customFont-h3 {
+    font-size: 34px !important;
+    line-height: 27px !important;
+}
+.customFont-h4 {
+    font-size: 28px !important;
+    line-height: 28px !important;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+nav-font-style {
+    font-family: myFirstFont, sans-serif;
+    font-size: 40px;
+}
+
+.navbar-default .nav li a {
+    font-family: myFirstFont, Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #B3ADCF;
+}
 
 /*nav.navbar.navbar-default.navbar-fixed-top.navbar-shrink .nav li a{color:royalblue!important}
 nav.navbar.navbar-default.navbar-fixed-top.navbar-shrink .nav li a:hover{color:blue!important}*/
@@ -70,6 +133,8 @@ nav.navbar.navbar-default.navbar-fixed-top.navbar-shrink .nav li a:hover{color:b
     font-weight: bold;
 }
 
+text-bold{ font-weight: bold; }
+
 .cursor-pointer {
     cursor: pointer;
 }
@@ -77,6 +142,14 @@ nav.navbar.navbar-default.navbar-fixed-top.navbar-shrink .nav li a:hover{color:b
 .collapse-style {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #337AB7;
+}
+
+body {
+    font-family: myFirstFont, sans-serif;
+    font-size: 20px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
 }
 
 .btn-style {
@@ -322,7 +395,10 @@ header {
     color: #fff
 }
 .colorFaded {
-    background-color: rgba(255, 255, 255, 0.30);
+    background-color: rgba(255, 255, 255, 0.60);
+}
+.padding150 {
+        padding: 150px 0;
 }
 
 header .intro-text {
@@ -332,9 +408,33 @@ header .intro-text {
 }
 
 section#contact {
-    /* background-color: #222; */
+    background-color: #F7F7F7;
+    background-image: none;
+    padding: 100px 0;
+    /*background-image: url(../img/konfetti.jpg);*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1420px;
+}
+.contactImage {
+    /*padding: 150px 0;*/ 
+    background-color: #F7F7F7;
     background-image: url(../img/konfetti.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 1420px;
 }
+
+@media (min-width: 768px){ 
+    section#contact {
+        padding: 0px; 
+   }
+}
+
+section#contact .section-heading {
+    color: rgba(0, 0, 0, 0.62);
+}
+.text-muted {
+    color: #3F3F3F;
+}
+
