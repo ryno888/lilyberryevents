@@ -166,7 +166,11 @@
                                 if($data->image_arr){
                                     $count = 0;
                                     foreach ($data->image_arr as $image) {
-                                        $img = mo_file::decompress_image($image->img_data);
+                                        $img = $image->img_thumbnail;
+                                        if(!$image->img_thumbnail){
+                                            $img = $image->img_data;
+                                        }
+                                        $img = mo_file::decompress_image($img);
                                         echo "
                                             <a class='example-image-link' href='$img' data-lightbox='example-set'><img class='example-image image-default' src='$img' alt=''/></a>
                                         ";
@@ -190,7 +194,6 @@ $(document).ready(function($){
     $("body").on("click", ".btn-load-more", function(){
         var new_page = parseInt($(this).attr('page'))+1;
         $(this).attr('page', new_page);
-//        var form = $('#loginForm').serialize();
         $.ajax({
             type: 'POST',
             url: "album/xalbum_load_more?page="+new_page+"&alb_id=<?php echo $data->album->alb_id ?>",

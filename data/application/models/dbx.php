@@ -63,9 +63,11 @@ class dbx extends CI_Controller{
             $sql = "INSERT INTO `$table` ($columns) VALUES ($values)";
 
             $query = $this->db->query($sql);
-            $return = $this->db->insert_id();
+            $index_column = db::get_table_prefix($table, true);
+            $obj->id = $this->db->insert_id();
+            $obj->{$index_column} = $obj->id;
         }
-        return $return;
+        return $obj;
     }
     //--------------------------------------------------------------------------
     public function delete($obj) {

@@ -88,7 +88,11 @@ $nav = mo_html::get_nav([
                                         if($data->album_image_arr){
                                             foreach ($data->album_image_arr as $image) {
                                                 $filename = $image->img_name && $image->img_name != "" ? $image->img_name : "unknownFile";
-                                                $img = mo_file::decompress_image($image->img_data);
+                                                $img = $image->img_thumbnail;
+                                                if(!$image->img_thumbnail){
+                                                    $img = $image->img_data;
+                                                }
+                                                $img = mo_file::decompress_image($img);
                                                 $date = date::get_date($image->img_date_created, date::$DATE_FORMAT_4);
                                                 $status_title = $image->img_is_main == 1 ? "unset as main image" : "set as main image";
                                                 $status_class = $image->img_is_main == 1 ? "glyphicon glyphicon-ok-sign color-green" : "glyphicon glyphicon-exclamation-sign color-light-red";
@@ -100,7 +104,7 @@ $nav = mo_html::get_nav([
                                                         <td class='table-valign-center'>{$filename}</td>
                                                         <td class='width-30-percent table-valign-center'>$date</td>
                                                         <td class='width-10-percent table-valign-center table-text-center'><a title='$status_title' class='$status_class cursor-pointer setMainImage' albid='{$data->album->id}' imgtype='{$image->img_is_main}' imgid='{$image->id}'></a></td>
-                                                        <td class='table-text-center table-valign-center'><img class='previewImage width-20-percent cursor-pointer' src='$img' /></td>
+                                                        <td class='table-text-center table-valign-center'><img class='previewImage width-20-percent cursor-pointer' img_id='$image->img_id' src='$img' /></td>
                                                     </tr>
                                                 ";
                                             }

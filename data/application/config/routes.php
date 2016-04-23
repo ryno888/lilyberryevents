@@ -73,6 +73,7 @@ $route['xedit_album'] = 'album/xedit_album';
 $route['xdelete_album'] = 'album/xdelete_album';
 $route['xdelete_image'] = 'album/xdelete_image';
 $route['xset_main_image'] = 'album/xset_main_image';
+$route['xload_image'] = 'album/xload_image';
 
 
 //request routes

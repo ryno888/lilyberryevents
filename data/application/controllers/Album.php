@@ -39,6 +39,7 @@ class Album extends CI_Controller {
         $this->data->album = $this->get_from_db("album", true);
         $session_data = mo_session::get_from_session("stored_albums", $this->data->album->id);
         $total_images = db::selectsingle("SELECT COUNT(img_id) FROM image WHERE img_ref_album = {$this->data->album->alb_id}");
+        $this->data->total_pages = ceil($total_images / 4);
         if(!$session_data || ($total_images > count($session_data))){
             $session_data = mo_album::get_album_image_arr($this->data->album->id, [
                 "limit" => 8,
@@ -71,6 +72,19 @@ class Album extends CI_Controller {
                     <a class='example-image-link' href='$img' data-lightbox='example-set'><img class='example-image image-default' src='$img' alt=''/></a>
                 ";
             }
+        }
+        
+        echo "$result";
+    }
+    //--------------------------------------------------------------------------
+    public function xload_image(){
+
+        //load views
+        $img_id = $this->input->get_post('img_id');
+        $image = $this->get_from_db("image", $img_id);
+        $result = "";
+        if($image){
+            $result = mo_file::decompress_image($image->img_data);
         }
         
         echo "$result";

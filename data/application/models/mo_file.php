@@ -22,6 +22,7 @@ class mo_file{
     }
     //--------------------------------------------------------------------------
     public static function decompress_image($image_data){
+        if(!$image_data) { return false; }
         $encoded_data = base64_decode($image_data);
         return gzuncompress($encoded_data);
     }
@@ -43,18 +44,45 @@ class mo_file{
                 ["dest_dir" => $dest_dir]
             );
             
+            
+            list($w, $h) = getimagesize($path);
+            $size_arr = mo_file::reduce_size($w, $h, "200");
+            $thumbnail_path = mo_file::resize_image(
+                $path, 
+                time()."_thumbnail", 
+                $options_arr['type'], [
+                    "dest_dir" => $dest_dir,
+                    "width" => $size_arr['width'],
+                    "height" => $size_arr['height'],
+                ]
+            );
+            
             $temp_file = file_get_contents($path);
             $base64_file = mo_file::compress_image($temp_file, $options_arr['type']);
+            
+            
 
             $image = db::get_default("image");
             $image->img_data = $base64_file;
+            $image->img_thumbnail = "";
             $image->img_ref_album = $alb_id;
             $image->img_name = $options_arr['file_name'];
             $image->img_date_created = date::get_date();
             $image->img_type = $options_arr['type'];
-            return db::insert($image);
+            $result = db::insert($image);
+//            $db_image = db::get_fromdb("image", "img_id = $result");
+            if($result){
+                if(property_exists($result, "img_data")){ unset($result->img_data); }
+                if(property_exists($result, "table_name")){ unset($result->table_name); }
+                $temp_thumbnail = file_get_contents($path);
+                $base64_thumbnail = mo_file::compress_image($temp_thumbnail, $options_arr['type']);
+                $result->img_thumbnail = $base64_thumbnail;
+                $result->name = "image";
+                db::update($result);
+            }
+            mo_file::delete_directory(dirname($thumbnail_path));
+            return $result;
         }
-        
     }
     //--------------------------------------------------------------------------
     public static function get_uploaded_files(){
@@ -70,6 +98,23 @@ class mo_file{
         }
         return $return;
     }
+    //--------------------------------------------------------------------------------
+    /**
+     * Completely removes a directory and all its contents
+     * @param type $dir
+     */
+    public static function delete_directory($dir) { 
+        if (is_dir($dir)) { 
+            $objects = scandir($dir); 
+            foreach ($objects as $object) { 
+                if ($object != "." && $object != "..") { 
+                    if (filetype($dir."/".$object) == "dir") rrmdir($dir."/".$object); else unlink($dir."/".$object); 
+                }       
+            } 
+            reset($objects); 
+            rmdir($dir); 
+        }
+     } 
     //--------------------------------------------------------------------------
     public static function resize_image($tmp_name, $name, $type, $options = []){
         $options_arr = array_merge([

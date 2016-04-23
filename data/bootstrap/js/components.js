@@ -42,9 +42,16 @@ $(document).ready(function($){
     });
     //================================================================================
     $("body").on("click", ".previewImage", function(){
-        var imgdata = $(this).attr('src');
-        $('.jqmOverlay, .jqmPreviewImage').fadeIn({duration : 400, queue : false});
-        $('.previewImageData').attr("src", imgdata);
+        var img_id = $(this).attr('img_id');
+        $.ajax({
+            type: 'POST',
+            url: "xload_image?img_id="+img_id,
+            success: function(response){
+                $('.jqmOverlay, .jqmPreviewImage').fadeIn({duration : 400, queue : false});
+                $('.previewImageData').attr("src", response);
+            }
+        });
+        
     });
     //================================================================================
     $("body").on("click", ".setMainImage", function(){
