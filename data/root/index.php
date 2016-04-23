@@ -32,16 +32,16 @@
         <div class="mainImge">
             <div class="container"></div>
             <div class="intro-text colorFaded">
-                <div class="intro-lead-in text-bold">Welcome To Lily Berry Events!</div>
+                <div class="intro-lead-in text-bold">Lily Berry Events</div>
                 <div class="intro-quote customFont-h3">
-                    "In the sunny summer, rain is no bummer
+                    "Rain is no bummer
                     When autumn comes, we gather loved ones                                                                    
                     In winter time, cuddle is no crime                                                                              
                     When spring arrives, the flowers thrive                                                                       
                     No matter what time of the year it is, there is always a time to gather awesome 
-                    family & friends" – Lily Berry Events
+                    family & friends" <br/>– Lily Berry Events -
                 </div>
-                <a href="#services" class="page-scroll btn btn-xl btn-style">Tell Me More</a>
+                <!--<a href="#services" class="page-scroll btn btn-xl btn-style">Tell Me More</a>-->
             </div>
         </div>
     </header>
@@ -56,7 +56,7 @@
             </div>
             <div class="row text-center">
                 
-                <div class="col-md-4">
+                <div class="col-md-4 font-15">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-heart fa-stack-1x fa-inverse"></i>
@@ -64,7 +64,7 @@
                     
                      <div>
                         <h4 class="service-heading">Weddings</h4>
-                        <p class="text-muted customFont-h4">
+                        <p class="text-muted services-text">
                             Browse through our stunning wedding packages to help you plan the most beautiful day of your life.
                         </p>
                         <!--<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>-->
@@ -74,7 +74,7 @@
                             </i>
                         </a>
                         <div id="demo" class="collapse">
-                            <p class="text-secondary customFont-h4">
+                            <p class="text-secondary services-text">
                                 <br/><span class='label-style sub-heading'>Lily Wedding Package (On-the-day Coordination): </span>Meeting with the Bridal Couple, 1 month before the wedding day to discuss all aspects about the wedding day. On the day of the wedding there will be careful supervision & coordination of all the proceedings from start to finish.
                                 <br/><span class='label-style sub-heading'>Custom package: </span>Choose what you want your wedding planner must organize for you and on the wedding day coordination
                                 <br/><span class='label-style sub-heading'>Full package: </span>Planning of the entire wedding from start to finish and coordination on the day of the wedding
@@ -82,24 +82,24 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 font-15">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-birthday-cake fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Parties</h4>
-                    <p class="text-muted customFont-h4">
+                    <p class="text-muted services-text">
                         Planned parties to celebrate your special moments with the friends and family that brings it all together.
                         Each party is uniquely crafted to deliver the best guest experience possible. From site searches to menu planning and all decor, there is no event we we can not create for you.
                     </p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 font-15">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-glass fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Special Events</h4>
-                    <p class="text-muted customFont-h4">Have a package tailored made to facilitate any unique event. Whether it is a corporate event or a family celebration. Spoil yourself with the creativity, experience and personal service you deserve. </p>
+                    <p class="text-muted services-text">Have a package tailored made to facilitate any unique event. Whether it is a corporate event or a family celebration. Spoil yourself with the creativity, experience and personal service you deserve. </p>
                 </div>
             </div>
         </div>
@@ -144,179 +144,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
-<!--    <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">About</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="timeline">
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="<?php echo $main_path; ?>/about/1.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>2009-2011</h4>
-                                    <h4 class="subheading">Our Humble Beginnings</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="<?php echo $main_path; ?>/about/2.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>March 2011</h4>
-                                    <h4 class="subheading">An Agency is Born</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="<?php echo $main_path; ?>/about/3.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>December 2012</h4>
-                                    <h4 class="subheading">Transition to Full Service</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="<?php echo $main_path; ?>/about/4.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>July 2014</h4>
-                                    <h4 class="subheading">Phase Two Expansion</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <h4>Be Part
-                                    <br>Of Our
-                                    <br>Story!</h4>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>-->
-
-    <!-- Team Section -->
-<!--    <section id="team" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Our Amazing Team</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="<?php echo $main_path; ?>/team/1.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Kay Garland</h4>
-                        <p class="text-muted">Lead Designer</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="<?php echo $main_path; ?>/team/2.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Larry Parker</h4>
-                        <p class="text-muted">Lead Marketer</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="<?php echo $main_path; ?>/team/3.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Diana Pertersen</h4>
-                        <p class="text-muted">Lead Developer</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
-                </div>
-            </div>
-        </div>
-    </section>-->
-
-    <!-- Clients Aside -->
-<!--    <aside class="clients">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="<?php echo $main_path; ?>/logos/envato.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="<?php echo $main_path; ?>/logos/designmodo.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="<?php echo $main_path; ?>/logos/themeforest.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="<?php echo $main_path; ?>/logos/creative-market.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </aside>-->
-    
     <!-- Contact Section -->
     <section id="contact">
         <div class="contactImage">
@@ -370,203 +197,33 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <a href="http://www.littlepinkbook.co.za/" target="_blank"><img src="http://www.littlepinkbook.co.za/wp-content/themes/littlepinkbook/images/logo_top_2.gif" width="174" height="105" alt="Celebration.co.za" border="0"></a>
-                    <a href="http://www.celebration.co.za/" target="_blank"><img src="http://www.celebration.co.za/members/member-logo.png" width="174" height="105" alt="Celebration.co.za" border="0"></a>
+                    <a href="http://www.littlepinkbook.co.za/2015/10/lily-berry-events/" target="_blank"><img src="http://www.littlepinkbook.co.za/wp-content/themes/littlepinkbook/images/logo_top_2.gif" width="174" height="105" alt="Celebration.co.za" border="0"></a>
+                    <a href="http://www.celebration.co.za/weddings/wedding-planners/lily-berry-events/" target="_blank"><img src="http://www.celebration.co.za/members/member-logo.png" width="174" height="105" alt="Celebration.co.za" border="0"></a>
                 
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
-                        <!--<li><a href="#"><i class="fa fa-twitter iconSpacing"></i></a>-->
-                        <!--</li>-->
-                        <li><a target="_blank" href="https://www.facebook.com/lilyberryevents"><i class="fa fa-facebook iconSpacing"></i></a>
+                        <li>
+                            <a target="_blank" href="https://www.facebook.com/lilyberryevents">
+                                <i class="fa fa-facebook iconSpacing"></i>
+                            </a>
                         </li>
-                        <li><a target="_blank" href="https://za.linkedin.com/in/leonellevanderberg"><i class="fa fa-linkedin iconSpacing"></i></a>
+                        <li>
+                            <a target="_blank" href="https://za.linkedin.com/in/leonellevanderberg">
+                                <i class="fa fa-linkedin iconSpacing"></i>
+                            </a>
                         </li>
                     </ul>
                     </div>
                 <div class="col-md-4">
                     <ul class="list-inline quicklinks">
-<!--                        <li><a href="#">Privacy Policy</a>
-                        </li>
-                        <li><a href="#">Terms of Use</a>
-                        </li>-->
-                        <li><a href="../index.php/login">Admin Login</a>
-                        </li>
+                        <li><a href="../index.php/login">Admin Login</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         </footer>
 
-    <!-- Portfolio Modals -->
-    <!-- Use the modals below to showcase details about your portfolio projects! -->
-
-    <!-- Portfolio Modal 1 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Project Name</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                            <img class="img-responsive img-centered" src="<?php echo $main_path; ?>/portfolio/roundicons-free.png" alt="">
-                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                            <p>
-                                <strong>Want these icons in this portfolio item sample?</strong>You can download 60 of them for free, courtesy of <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">RoundIcons.com</a>, or you can purchase the 1500 icon set <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">here</a>.</p>
-                            <ul class="list-inline">
-                                <li>Date: July 2014</li>
-                                <li>Client: Round Icons</li>
-                                <li>Category: Graphic Design</li>
-                            </ul>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 2 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Heading</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                            <img class="img-responsive img-centered" src="<?php echo $main_path; ?>/portfolio/startup-framework-preview.png" alt="">
-                            <p><a href="http://designmodo.com/startup/?u=787">Startup Framework</a> is a website builder for professionals. Startup Framework contains components and complex blocks (PSD+HTML Bootstrap themes and templates) which can easily be integrated into almost any design. All of these components are made in the same style, and can easily be integrated into projects, allowing you to create hundreds of solutions for your future projects.</p>
-                            <p>You can preview Startup Framework <a href="http://designmodo.com/startup/?u=787">here</a>.</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 3 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Project Name</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                            <img class="img-responsive img-centered" src="<?php echo $main_path; ?>/portfolio/treehouse-preview.png" alt="">
-                            <p>Treehouse is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. This is bright and spacious design perfect for people or startup companies looking to showcase their apps or other projects.</p>
-                            <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/treehouse-free-psd-web-template/">FreebiesXpress.com</a>.</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 4 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Project Name</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                            <img class="img-responsive img-centered" src="<?php echo $main_path; ?>/portfolio/golden-preview.png" alt="">
-                            <p>Start Bootstrap's Agency theme is based on Golden, a free PSD website template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Golden is a modern and clean one page web template that was made exclusively for Best PSD Freebies. This template has a great portfolio, timeline, and meet your team sections that can be easily modified to fit your needs.</p>
-                            <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/golden-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 5 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Project Name</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                            <img class="img-responsive img-centered" src="<?php echo $main_path; ?>/portfolio/escape-preview.png" alt="">
-                            <p>Escape is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Escape is a one page web template that was designed with agencies in mind. This template is ideal for those looking for a simple one page solution to describe your business and offer your services.</p>
-                            <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/escape-one-page-psd-web-template/">FreebiesXpress.com</a>.</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 6 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Project Name</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                            <img class="img-responsive img-centered" src="<?php echo $main_path; ?>/portfolio/dreams-preview.png" alt="">
-                            <p>Dreams is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Dreams is a modern one page web template designed for almost any purpose. It’s a beautiful template that’s designed with the Bootstrap framework in mind.</p>
-                            <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/dreams-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     
     <div class="jqmOverlay jqmCloseTarget" class="block"></div>
     <div class="jqmMessage jqmModal jqmCloseTarget">
