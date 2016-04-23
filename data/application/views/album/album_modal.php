@@ -102,7 +102,13 @@
     
     .h2class{ font-size: 14px; }
     .sub-header{ font-size: 12px; }
-
+    .image-default{
+        max-width: 300px;
+        float: left;
+        padding: 5px;
+        background-color: white;
+        border-radius: 5px;
+    }
     @media (min-width: 768px) {
 
         .h2class{ font-size: 18px; }
@@ -123,9 +129,6 @@
 </div>
     
 <div class="margin-top-50"></div>
-<!--    <div style='padding: 5px'>
-        <button onclick="location.href = 'home#portfolio';" class="btn btn-style"><i class="fa fa-times"></i> Back to Site</button>
-    </div>-->
     <div class="margin-top-50">
         <div style='margin: 0 auto; width: 30%; text-align: center'>
             <h2 class='h2class'><?php echo $data->album->alb_name ?></h2>
@@ -141,10 +144,16 @@
                                 foreach ($data->image_arr as $image) {
                                     $img = mo_file::decompress_image($image->img_data);
                                     echo "
-                                        <div class='post-box col-lg-4 col-md-4 col-sm-4'> 
-                                            <img class='cursor-pointer previewImage img-responsive img-thumbnail' src='$img'>
-                                        </div>
+                                        <a class='example-image-link' href='$img' data-lightbox='example-set'><img class='example-image image-default' src='$img' alt=''/></a>
                                     ";
+//                                    echo "
+//                                        <a class='example-image-link' href='$img' data-lightbox='example-set' data-title='Click the right half of the image to move forward.'><img class='example-image image-default' src='$img' alt=''/></a>
+//                                    ";
+//                                    echo "
+//                                        <div class='post-box col-lg-4 col-md-4 col-sm-4'> 
+//                                            <img class='cursor-pointer previewImage img-responsive img-thumbnail' src='$img'>
+//                                        </div>
+//                                    ";
                                 }
                             }
                         
@@ -156,22 +165,3 @@
         </div>
     </div>
 <?php include_once 'root/footer.php'; ?>
-
-<!-- jQuery -->
-<script src="<?php echo $jquery_js; ?>"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="<?php echo $bootstrap_min_js; ?>"></script>
-
-<!-- Plugin JavaScript -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script src="<?php echo $classie_js; ?>"></script>
-<script src="<?php echo $cbpAnimatedHeader_js; ?>"></script>
-
-<!-- Contact Form JavaScript -->
-<script src="<?php echo $jqBootstrapValidation_js; ?>"></script>
-<script src="<?php echo $contact_me_js; ?>"></script>
-
-<!-- Custom Theme JavaScript -->
-<script src="<?php echo $agency_js; ?>"></script>
-<script src="<?php echo $components_js; ?>"></script>

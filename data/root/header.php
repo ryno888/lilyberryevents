@@ -5,6 +5,7 @@
     
     $bootstrap_min_css = "$url/css/bootstrap.min.css";
     $agency_css = "$url/css/agency.css";
+    $lightbox_css = "$url/css/lightbox.css";
     $styles_css = "$url/css/styles.css";
     $font_awesome_min_css = "$url/font-awesome/css/font-awesome.min.css";
     
@@ -40,6 +41,7 @@
 
     <!-- Custom CSS -->
     <link href="<?php echo $agency_css; ?>" rel="stylesheet">
+    <link href="<?php echo $lightbox_css; ?>" rel="stylesheet">
     <link href="<?php echo $styles_css; ?>" rel="stylesheet">
 
     <!-- Custom Fonts -->

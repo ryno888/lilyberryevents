@@ -31,8 +31,8 @@
     <header>
         <div class="mainImge">
             <div class="container"></div>
-            <div class="intro-text colorFaded">
-                <div class="intro-lead-in text-bold">Lily Berry Events</div>
+            <div class="intro-text">
+<!--                <div class="intro-lead-in text-bold">Lily Berry Events</div>
                 <div class="intro-quote customFont-h3">
                     "Rain is no bummer
                     When autumn comes, we gather loved ones                                                                    
@@ -40,7 +40,7 @@
                     When spring arrives, the flowers thrive                                                                       
                     No matter what time of the year it is, there is always a time to gather awesome 
                     family & friends" <br/>– Lily Berry Events -
-                </div>
+                </div>-->
                 <!--<a href="#services" class="page-scroll btn btn-xl btn-style">Tell Me More</a>-->
             </div>
         </div>
