@@ -61,3 +61,4 @@
             <img class='width-100-percent previewImageData' src=''/>
         </div>
     </div>
+    <div id="errorLogDiv" name='errorLogDiv' class="fl"></div>

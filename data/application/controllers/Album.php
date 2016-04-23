@@ -37,9 +37,35 @@ class Album extends CI_Controller {
 
         //load views
         $this->data->album = $this->get_from_db("album", true);
-        $this->data->image_arr = mo_album::get_album_image_arr($this->data->album->id);
+        $this->data->image_arr = mo_album::get_album_image_arr($this->data->album->id, [
+            "limit" => 8,
+            "offset" => 0,
+        ]);
         $data['data'] = $this->get_data("album_list");
         $this->load->view("album/album_modal", $data);
+    }
+    //--------------------------------------------------------------------------
+    public function xalbum_load_more(){
+
+        //load views
+        $limit = 8;
+        $result = "";
+        $page = $this->input->get_post('page');
+        $alb_id = $this->input->get_post('alb_id');
+        $image_arr = mo_album::get_album_image_arr($alb_id, [
+            "limit" => $limit,
+            "offset" => $limit * $page,
+        ]);
+        if($image_arr){
+            foreach ($image_arr as $image) {
+                $img = mo_file::decompress_image($image->img_data);
+                $result .= "
+                    <a class='example-image-link' href='$img' data-lightbox='example-set'><img class='example-image image-default' src='$img' alt=''/></a>
+                ";
+            }
+        }
+        
+        echo "$result";
     }
     //--------------------------------------------------------------------------
     public function add_album(){

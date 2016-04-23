@@ -22,6 +22,15 @@ $(document).ready(function($){
         $('.previewImageData').attr("src", imgdata);
     });
     //================================================================================
+    $("body").on("click", ".clearErrorBtn", function(){
+        $.ajax({
+            type: 'POST',
+            url: "clear_error",
+            success: function(){
+                $('.errorDiv').addClass('hidden');
+            }
+        });
+    });
     //================================================================================
     $('.jqmClose').click(function(){
         $('.jqmCloseTarget').fadeOut({duration : 400, queue : false});

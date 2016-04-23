@@ -23,7 +23,10 @@ if ( ! function_exists('console'))
 	{
 		$CI =& get_instance();
         $filename = DIR_ERROR_FILE;
-        file_put_contents($filename, print_r($var, true)."\r\n", FILE_APPEND); 
+        mo_file::make_dir(dirname($filename));
+        $file = fopen($filename,"a+");
+        fwrite($file,print_r($var, true)."\r\n");
+        fclose($file);
 	}
 }
 // ------------------------------------------------------------------------

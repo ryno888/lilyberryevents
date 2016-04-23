@@ -56,8 +56,11 @@ class mo_album{
         }
     }
     //--------------------------------------------------------------------------
-    public static function get_album_image_arr($alb_id){
-        return db::get_fromdb("image", "img_ref_album = $alb_id", ["multiple" => true]);
+    public static function get_album_image_arr($alb_id, $options = []){
+        $options_arr = array_merge([
+            "multiple" => true
+        ], $options);
+        return db::get_fromdb("image", "img_ref_album = $alb_id", $options_arr);
     }
     //--------------------------------------------------------------------------
     public static function get_album_arr(){

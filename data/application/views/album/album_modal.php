@@ -21,7 +21,7 @@
     }
 
     a {
-      color: #BBB5D4;
+      color: #337AB7;
     }
 
     a:hover {
@@ -102,8 +102,10 @@
     
     .h2class{ font-size: 14px; }
     .sub-header{ font-size: 12px; }
+    .load-more-wrapper{width: 100%; text-align: center; padding: 10px;}
     .image-default{
         max-width: 300px;
+        height: 200px;
         float: left;
         padding: 5px;
         background-color: white;
@@ -115,6 +117,27 @@
         .sub-header{ font-size: 14px; }
 
     }
+    
+    @media (min-width: 1000px){
+        .container {
+            width: 1235px;
+        }
+    }
+    .btn-load-more {
+        color: #fff;
+        background-color: #337AB7;
+        border-color: #337AB7;
+        font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        text-transform: none;
+        border-radius: 3px;
+    }
+    
+    .btn-load-more:hover {
+        color: #fff !important;
+        background-color: #31708F !important;
+    }
+    
+    
 </style>
 <div class="margin-left-3-perc width-94-percent">
     <div class="margin-top-20"></div>
@@ -135,33 +158,46 @@
             <p class="item-intro text-muted sub-header"><?php echo $data->album->alb_detail ?></p>
         </div>
         <div id="home" class="header">
-	    <div id="myCarousel" class="carousel slide bg-light-gray" data-ride="carousel">
-        	<div class="carousel-inner">
-	            <div class="item active">
-			    	<div class="container">
-                        <?php
-                            if($data->image_arr){
-                                foreach ($data->image_arr as $image) {
-                                    $img = mo_file::decompress_image($image->img_data);
-                                    echo "
-                                        <a class='example-image-link' href='$img' data-lightbox='example-set'><img class='example-image image-default' src='$img' alt=''/></a>
-                                    ";
-//                                    echo "
-//                                        <a class='example-image-link' href='$img' data-lightbox='example-set' data-title='Click the right half of the image to move forward.'><img class='example-image image-default' src='$img' alt=''/></a>
-//                                    ";
-//                                    echo "
-//                                        <div class='post-box col-lg-4 col-md-4 col-sm-4'> 
-//                                            <img class='cursor-pointer previewImage img-responsive img-thumbnail' src='$img'>
-//                                        </div>
-//                                    ";
+            <div id="myCarousel" class="carousel slide bg-light-gray" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="container imageWrapper">
+                            <?php
+                                if($data->image_arr){
+                                    $count = 0;
+                                    foreach ($data->image_arr as $image) {
+                                        $img = mo_file::decompress_image($image->img_data);
+                                        echo "
+                                            <a class='example-image-link' href='$img' data-lightbox='example-set'><img class='example-image image-default' src='$img' alt=''/></a>
+                                        ";
+                                    }
                                 }
-                            }
-                        
-                        ?>
+
+                            ?>
                         </div>
                     </div>
                 </div>
+                <div class="load-more-wrapper">
+                    <div class="btn btn-load-more" page='0'>Load More...</div>
+                </div>
             </div>
         </div>
+        
     </div>
 <?php include_once 'root/footer.php'; ?>
+<script>
+$(document).ready(function($){
+    $("body").on("click", ".btn-load-more", function(){
+        var new_page = parseInt($(this).attr('page'))+1;
+        $(this).attr('page', new_page);
+//        var form = $('#loginForm').serialize();
+        $.ajax({
+            type: 'POST',
+            url: "album/xalbum_load_more?page="+new_page+"&alb_id=<?php echo $data->album->alb_id ?>",
+            success: function(response){
+                $('.imageWrapper').append(response);
+            }
+        });
+    });
+});
+</script>
