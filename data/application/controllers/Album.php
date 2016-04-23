@@ -48,7 +48,7 @@ class Album extends CI_Controller {
     public function xalbum_load_more(){
 
         //load views
-        $limit = 8;
+        $limit = 4;
         $result = "";
         $page = $this->input->get_post('page');
         $alb_id = $this->input->get_post('alb_id');

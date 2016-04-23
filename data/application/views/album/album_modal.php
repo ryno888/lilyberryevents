@@ -178,7 +178,7 @@
                     </div>
                 </div>
                 <div class="load-more-wrapper">
-                    <div class="btn btn-load-more" page='0'>Load More...</div>
+                    <div class="btn btn-load-more" page='1'>Load More...</div>
                 </div>
             </div>
         </div>
