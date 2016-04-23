@@ -234,24 +234,7 @@
         </div>
     </div>
     
-    <!-- jQuery -->
-    <script src="<?php echo $jquery_js; ?>"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="<?php echo $bootstrap_min_js; ?>"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="<?php echo $classie_js; ?>"></script>
-    <script src="<?php echo $cbpAnimatedHeader_js; ?>"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="<?php echo $jqBootstrapValidation_js; ?>"></script>
-    <!--<script src="<?php // echo $contact_me_js; ?>"></script>-->
-
-    <!-- Custom Theme JavaScript -->
-    <script src="<?php echo $agency_js; ?>"></script>
-    <script src="<?php echo $components_js; ?>"></script>
+   
 
 </body>
 <?php include_once './root/footer.php'; ?>
