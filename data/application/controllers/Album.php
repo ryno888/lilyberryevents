@@ -37,11 +37,19 @@ class Album extends CI_Controller {
 
         //load views
         $this->data->album = $this->get_from_db("album", true);
-        $this->data->image_arr = mo_album::get_album_image_arr($this->data->album->id, [
-            "limit" => 8,
-            "offset" => 0,
-        ]);
-        $data['data'] = $this->get_data("album_list");
+        $session_data = mo_session::get_from_session("stored_albums", $this->data->album->id);
+        $total_images = db::selectsingle("SELECT COUNT(img_id) FROM image WHERE img_ref_album = {$this->data->album->alb_id}");
+        if(!$session_data || ($total_images > count($session_data))){
+            $session_data = mo_album::get_album_image_arr($this->data->album->id, [
+                "limit" => 8,
+                "offset" => 0,
+            ]);
+            mo_session::set_in_session($session_data, "stored_albums", $this->data->album->id);
+        }
+        
+        $this->data->image_arr = $session_data;
+        
+        $data['data'] = $this->get_data("album_modal");
         $this->load->view("album/album_modal", $data);
     }
     //--------------------------------------------------------------------------

@@ -141,4 +141,5 @@ $autoload['model'] = array(
     'mo_html',
     'mo_email',
     'mo_user',
+    'mo_session',
 );
