@@ -104,9 +104,19 @@ $nav = mo_html::get_nav([
                                                         <td class='table-valign-center'>{$filename}</td>
                                                         <td class='width-30-percent table-valign-center'>$date</td>
                                                         <td class='width-10-percent table-valign-center table-text-center'><a title='$status_title' class='$status_class cursor-pointer setMainImage' albid='{$data->album->id}' imgtype='{$image->img_is_main}' imgid='{$image->id}'></a></td>
-                                                        <td class='table-text-center table-valign-center'><img class='previewImage width-20-percent cursor-pointer' img_id='$image->img_id' src='$img' /></td>
                                                     </tr>
                                                 ";
+//                                                echo "
+//                                                    <tr class='font14'>
+//                                                        <td class='width-5-percent table-valign-center'>
+//                                                            <a title='Delete Image' class='glyphicon glyphicon-remove deleteImagePopup cursor-pointer' albid='{$data->album->id}' imgid='{$image->id}'></a>
+//                                                        </td>
+//                                                        <td class='table-valign-center'>{$filename}</td>
+//                                                        <td class='width-30-percent table-valign-center'>$date</td>
+//                                                        <td class='width-10-percent table-valign-center table-text-center'><a title='$status_title' class='$status_class cursor-pointer setMainImage' albid='{$data->album->id}' imgtype='{$image->img_is_main}' imgid='{$image->id}'></a></td>
+//                                                        <td class='table-text-center table-valign-center'><img class='previewImage width-20-percent cursor-pointer' img_id='$image->img_id' src='$img' /></td>
+//                                                    </tr>
+//                                                ";
                                             }
                                         }else{
                                             echo "
