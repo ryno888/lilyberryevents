@@ -45,16 +45,16 @@ class mo_html{
     public static function get_pagination($pages_count = 0, $options = []) {
         $options_arr = array_merge([
            "url" => false,
-           "current_page" => 1
+           "current_page" => 1,
+           "args" => []
         ],$options);
-        
+        $args = "&".implode("&", $options_arr['args']);
         
         if($pages_count == 0){ return false; }
-        
         $pages_html = "";
         for($i=1; $i <= $pages_count; $i++){
             $active = $options_arr['current_page'] == $i ? "background-color: #D8D4E8;" : "";
-            $pages_html .= "<li><a style='$active' href='{$options_arr['url']}?page=$i'>$i</a></li>";
+            $pages_html .= "<li><a style='$active' href='{$options_arr['url']}?page={$i}{$args}'>$i</a></li>";
         }
         
         $next_page = $options_arr['current_page'] + 1;
@@ -70,13 +70,13 @@ class mo_html{
             <div class='pull-left'>
                 <ul class='pagination'>
                     <li>
-                        <a href='{$options_arr['url']}?page=$previous_page' aria-label='Previous'>
+                        <a href='{$options_arr['url']}?page=$previous_page{$args}' aria-label='Previous'>
                             <span aria-hidden='true'><</span>
                         </a>
                     </li>
                     $pages_html
                     <li>
-                        <a href='{$options_arr['url']}?page=$next_page' aria-label='Next'>
+                        <a href='{$options_arr['url']}?page=$next_page{$args}' aria-label='Next'>
                             <span aria-hidden='true'>></span>
                         </a>
                     </li>

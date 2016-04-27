@@ -16,5 +16,14 @@ class gallery{
         return $album_arr ? $album_arr : [];
     }
     //--------------------------------------------------------------------------
+    public static function get_gallery_album_images($sql_where = false, $options = []) {
+        $options_arr = array_merge([
+            "multiple" => true
+        ],$options);
+        $album_arr = db::get_fromdb("image", $sql_where, $options_arr);
+        
+        return $album_arr ? $album_arr : [];
+    }
+    //--------------------------------------------------------------------------
 }
 

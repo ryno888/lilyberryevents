@@ -86,6 +86,12 @@ $nav = mo_html::get_nav([
                                 <tbody>
                                     <?php
                                         if($data->album_image_arr){
+                                            $pagination = mo_html::get_pagination($data->total_pages, [
+                                                "url" => "edit_album",
+                                                "current_page" => $data->page,
+                                                "args" => ["alb_id={$data->album->alb_id}"]
+                                            ]);
+                                            echo "$pagination";
                                             foreach ($data->album_image_arr as $image) {
                                                 $filename = $image->img_name && $image->img_name != "" ? $image->img_name : "unknownFile";
                                                 $img = $image->img_thumbnail;
@@ -104,19 +110,9 @@ $nav = mo_html::get_nav([
                                                         <td class='table-valign-center'>{$filename}</td>
                                                         <td class='width-30-percent table-valign-center'>$date</td>
                                                         <td class='width-10-percent table-valign-center table-text-center'><a title='$status_title' class='$status_class cursor-pointer setMainImage' albid='{$data->album->id}' imgtype='{$image->img_is_main}' imgid='{$image->id}'></a></td>
+                                                        <td class='table-text-center table-valign-center'><img class='previewImage width-20-percent cursor-pointer' img_id='$image->img_id' src='$img' /></td>
                                                     </tr>
                                                 ";
-//                                                echo "
-//                                                    <tr class='font14'>
-//                                                        <td class='width-5-percent table-valign-center'>
-//                                                            <a title='Delete Image' class='glyphicon glyphicon-remove deleteImagePopup cursor-pointer' albid='{$data->album->id}' imgid='{$image->id}'></a>
-//                                                        </td>
-//                                                        <td class='table-valign-center'>{$filename}</td>
-//                                                        <td class='width-30-percent table-valign-center'>$date</td>
-//                                                        <td class='width-10-percent table-valign-center table-text-center'><a title='$status_title' class='$status_class cursor-pointer setMainImage' albid='{$data->album->id}' imgtype='{$image->img_is_main}' imgid='{$image->id}'></a></td>
-//                                                        <td class='table-text-center table-valign-center'><img class='previewImage width-20-percent cursor-pointer' img_id='$image->img_id' src='$img' /></td>
-//                                                    </tr>
-//                                                ";
                                             }
                                         }else{
                                             echo "

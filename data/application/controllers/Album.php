@@ -100,11 +100,18 @@ class Album extends CI_Controller {
     }
     //--------------------------------------------------------------------------
     public function edit_album(){
+        $alb_id = $this->input->get_post('alb_id');
+        $this->data->page = $this->input->get_post('page');
+        if(!$this->data->page) { $this->data->page = 1; }
+        $total_emails = db::selectsingle("SELECT COUNT(img_id) FROM image WHERE img_ref_album = $alb_id");
+        $this->data->total_pages = ceil($total_emails/5);
+        $offset = ($this->data->page-1) * 5;
         $data['data'] = $this->get_data("edit_album");
         
-        $alb_id = $this->input->get_post('alb_id');
+        
         $this->data->album = $this->get_from_db("album", $alb_id);
-        $this->data->album_image_arr = db::get_fromdb("image", "img_ref_album = $alb_id", ["multiple" => true]);
+//        $this->data->album_image_arr = db::get_fromdb("image", "img_ref_album = $alb_id", ["multiple" => true]);
+        $this->data->album_image_arr = gallery::get_gallery_album_images("img_ref_album = $alb_id", ["limit" => 5, "offset" => $offset]);
         //load views
         $this->load->view("template/header", $data);
         $this->load->view("album/edit_album", $data);
