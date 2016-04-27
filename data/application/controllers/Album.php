@@ -111,8 +111,8 @@ class Album extends CI_Controller {
         
         $this->data->album = $this->get_from_db("album", $alb_id);
 //        $this->data->album_image_arr = db::get_fromdb("image", "img_ref_album = $alb_id", ["multiple" => true]);
-        $this->data->album_image_arr = gallery::get_gallery_album_images("img_ref_album = $alb_id", ["limit" => 5, "offset" => $offset]);
-//        $this->data->album_image_arr = gallery::get_gallery_album_images("img_ref_album = $alb_id", ["order_by" => "ORDER BY alb_date_created DESC", "limit" => 5, "offset" => $offset]);
+//        $this->data->album_image_arr = gallery::get_gallery_album_images("img_ref_album = $alb_id", ["limit" => 5, "offset" => $offset]);
+        $this->data->album_image_arr = gallery::get_gallery_album_images("img_ref_album = $alb_id", ["order_by" => "ORDER BY img_date_created DESC", "limit" => 5, "offset" => $offset]);
         //load views
         $this->load->view("template/header", $data);
         $this->load->view("album/edit_album", $data);
