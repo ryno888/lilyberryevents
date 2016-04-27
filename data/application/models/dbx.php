@@ -30,7 +30,7 @@ class dbx extends CI_Controller{
             SELECT {$options_arr['columns']}, 
             {$index_column}_id AS id,
             '{$table}' AS 'name'
-            FROM `$table` {$options_arr['left_join']} $where $limit $offset {$options_arr['order_by']}
+            FROM `$table` {$options_arr['left_join']} $where {$options_arr['order_by']} $limit $offset 
         ");
         
         if($options_arr['show_data']){
