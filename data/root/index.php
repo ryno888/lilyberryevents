@@ -64,9 +64,7 @@
                     
                      <div>
                         <h4 class="service-heading">Weddings</h4>
-                        <p class="text-muted services-text">
-                            Browse through our stunning wedding packages to help you plan the most beautiful day of your life.
-                        </p>
+                        <p class="text-muted services-text">Browse through our stunning wedding packages to help you plan the most beautiful day of your life.</p>
                         <!--<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>-->
                         <a class="cursor-pointer" data-toggle="collapse" data-target="#demo">
                             <i class="fa fa-arrow-down collapseText">
@@ -76,8 +74,8 @@
                         <div id="demo" class="collapse">
                             <p class="text-secondary services-text">
                                 <br/><span class='label-style sub-heading'>Lily Wedding Package (On-the-day Coordination): </span>Meeting with the Bridal Couple, 1 month before the wedding day to discuss all aspects about the wedding day. On the day of the wedding there will be careful supervision & coordination of all the proceedings from start to finish.
-                                <br/><span class='label-style sub-heading'>Custom package: </span>Choose what you want your wedding planner must organize for you and on the wedding day coordination
-                                <br/><span class='label-style sub-heading'>Full package: </span>Planning of the entire wedding from start to finish and coordination on the day of the wedding
+                                <br/><span class='label-style sub-heading'>Berry Wedding Package (Customized Wedding Package): </span>For couples that only require partial planning of their wedding day. Couple will have the opportunity to choose what they want Lily Berry Events to organize for their wedding.
+                                <br/><span class='label-style sub-heading'>Lily Berry Wedding Package (Full Wedding Package): </span>Complete planning, sourcing, correspondence & coordination of your wedding day from start to finish.
                             </p>
                         </div>
                     </div>
@@ -88,10 +86,7 @@
                         <i class="fa fa-birthday-cake fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Parties</h4>
-                    <p class="text-muted services-text">
-                        Planned parties to celebrate your special moments with the friends and family that brings it all together.
-                        Each party is uniquely crafted to deliver the best guest experience possible. From site searches to menu planning and all decor, there is no event we we can not create for you.
-                    </p>
+                    <p class="text-muted services-text"> Planned parties to celebrate your special moments with the friends and family that brings it all together. Each party is exclusively planned to deliver the best guest experience possible. Packages are tailored according to your specifications.</p>
                 </div>
                 <div class="col-md-4 font-15">
                     <span class="fa-stack fa-4x">
@@ -99,7 +94,7 @@
                         <i class="fa fa-glass fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Special Events</h4>
-                    <p class="text-muted services-text">Have a package tailored made to facilitate any unique event. Whether it is a corporate event or a family celebration. Spoil yourself with the creativity, experience and personal service you deserve. </p>
+                    <p class="text-muted services-text">Have a package tailor made to create any exceptional event, whether it is a corporate event or a family celebration. Spoil yourself with the creativity, experience and personal service you deserve.</p>
                 </div>
             </div>
         </div>
