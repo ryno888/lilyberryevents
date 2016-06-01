@@ -210,6 +210,11 @@
                                 <i class="fa fa-linkedin iconSpacing"></i>
                             </a>
                         </li>
+                        <li>
+                            <a target="_blank" href="https://za.pinterest.com/lilyberryevents/">
+                                <i class="fa fa-pinterest iconSpacing"></i>
+                            </a>
+                        </li>
                     </ul>
                     </div>
                 <div class="col-md-4">
