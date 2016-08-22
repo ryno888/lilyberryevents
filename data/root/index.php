@@ -196,8 +196,10 @@
                 <div class="col-md-8">
                     <a href="http://www.littlepinkbook.co.za/2015/10/lily-berry-events/" target="_blank"><img src="http://www.littlepinkbook.co.za/wp-content/themes/littlepinkbook/images/logo_top_2.gif" width="150" alt="Celebration.co.za" border="0"></a>
                     <a href="http://www.celebration.co.za/weddings/wedding-planners/lily-berry-events/" target="_blank"><img src="http://www.celebration.co.za/members/member-logo.png" width="150" alt="Celebration.co.za" border="0"></a>
-                    <img alt="Trou Inspirasie" src="<?php echo $GLOBALS['CFG']->config['base_url'] ?>/files/images/trou_inspirasie.jpg" width="120"  />
-                    <img alt="Trou Inspirasie" src="<?php echo $GLOBALS['CFG']->config['base_url'] ?>/files/images/wednew.jpg" width="120"  />
+                    <a href="http://trouinspirasie.co.za/diens/ko-ordineerders/lily-berry-events/" target="_blank"><img alt="Trou Inspirasie" src="<?php echo $GLOBALS['CFG']->config['base_url'] ?>/files/images/trou_inspirasie.jpg" width="120"  /></a>
+                    <a href="http://www.saweddings.co.za/event-planning-17/wedding-coordinator-18/lily-berry-events--05ae2a7e-51a7-11e6-b308-0a13b1a821cd" target="_blank"><img alt="Wednew" src="<?php echo $GLOBALS['CFG']->config['base_url'] ?>/files/images/wednew.jpg" width="120"  /></a>
+                    
+                    
                     <!--<a href="http://directory.theprettyblog.com/listing/55bb31fd4a7c300300404bea" target="_blank" alt="The Pretty Blog"><img alt="I'm Inspired by The Pretty Blog" src="https://s3.amazonaws.com/prettycdn/badges/Badges_TPB_love_01.png" width="150"  /></a>-->
                 </div>
                 <div class="col-md-4 margin-top-20">
